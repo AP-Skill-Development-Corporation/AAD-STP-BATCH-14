@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout anu:layout_height="match_parent"
+    anu:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    anu:orientation="vertical"
+    xmlns:anu="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity">
+    <Button
+        anu:layout_width="match_parent"
+        anu:layout_height="wrap_content"
+        anu:text="Toast"
+        anu:textSize="30sp"
+        anu:textColor="@android:color/white"
+        anu:background="#0E31F1"
+        anu:onClick="showToast"
+        />
+    <TextView
+        anu:layout_width="match_parent"
+        anu:layout_height="wrap_content"
+        anu:text="0"
+        anu:background="#EFD916"
+        anu:textSize="150sp"
+        anu:gravity="center"
+        anu:id="@+id/tv"
+        />
+    <Button
+        anu:layout_width="match_parent"
+        anu:layout_height="wrap_content"
+        anu:text="Count"
+        anu:textColor="@android:color/white"
+        anu:background="#0E31F1"
+        anu:onClick="showCount"
+        />
+</LinearLayout>
