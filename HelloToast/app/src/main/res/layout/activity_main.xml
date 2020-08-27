@@ -3,20 +3,22 @@
     anu:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     anu:orientation="vertical"
+    anu:weightSum="10"
     xmlns:anu="http://schemas.android.com/apk/res/android"
     tools:context=".MainActivity">
     <Button
         anu:layout_width="match_parent"
-        anu:layout_height="wrap_content"
+        anu:layout_height="0dp"
+        anu:layout_weight="1"
         anu:text="Toast"
-        anu:textSize="30sp"
         anu:textColor="@android:color/white"
         anu:background="#0E31F1"
         anu:onClick="showToast"
         />
     <TextView
         anu:layout_width="match_parent"
-        anu:layout_height="wrap_content"
+        anu:layout_height="0dp"
+        anu:layout_weight="8"
         anu:text="0"
         anu:background="#EFD916"
         anu:textSize="150sp"
@@ -25,7 +27,8 @@
         />
     <Button
         anu:layout_width="match_parent"
-        anu:layout_height="wrap_content"
+        anu:layout_height="0dp"
+        anu:layout_weight="1"
         anu:text="Count"
         anu:textColor="@android:color/white"
         anu:background="#0E31F1"
