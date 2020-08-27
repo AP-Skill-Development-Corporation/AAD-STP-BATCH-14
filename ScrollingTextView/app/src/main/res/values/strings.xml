@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ScrollingTextView</string>
+    <string name="aboutme">aboutme</string>
+    <string name="about_me">
+        <b>I like watching tv serials on</b> www.google.com\n9874561230\ndevianusha.n@apssdc.in\ndevianushan@gmail.com
+        <i>i like developing the app on android.</i>
+
+
+    </string>
+</resources>
