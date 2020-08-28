@@ -1,8 +1,10 @@
 package com.muneiah.hellotoast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +17,10 @@ int count=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTextview=findViewById(R.id.tv);
+        if (savedInstanceState!=null && savedInstanceState.containsKey("ap")){
+            count=savedInstanceState.getInt("ap");
+            mTextview.setText(String.valueOf(count));
+        }
 
     }
 
@@ -26,5 +32,11 @@ int count=0;
         count++;
         mTextview.setText(String.valueOf(count));
 
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("ap",count);
     }
 }
