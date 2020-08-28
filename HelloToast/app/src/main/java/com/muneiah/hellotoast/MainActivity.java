@@ -17,9 +17,10 @@ int count=0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTextview=findViewById(R.id.tv);
-        if (savedInstanceState!=null && savedInstanceState.containsKey("ap")){
-            count=savedInstanceState.getInt("ap");
+        if (savedInstanceState!=null && savedInstanceState.containsKey("key")){
+            count=savedInstanceState.getInt("key");
             mTextview.setText(String.valueOf(count));
+
         }
 
     }
@@ -37,6 +38,7 @@ int count=0;
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("ap",count);
+        outState.putInt("key",count);
+
     }
 }
