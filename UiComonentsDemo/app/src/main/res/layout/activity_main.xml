@@ -32,4 +32,20 @@
         android:textSize="30sp"
         android:textColor="@color/colorPrimary"
         android:text="Result Seekbar"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/iv"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_android_black_24dp"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ib"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_add_location_black_24dp"/>
 </LinearLayout>
