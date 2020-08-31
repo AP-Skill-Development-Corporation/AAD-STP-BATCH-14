@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RatingBar
+       style="@style/design"
+        android:id="@+id/rb"
+        />
+    <TextView
+        style="@style/design"
+        android:id="@+id/result_rb"
+        android:text="Result Rating "
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+       />
+   <SeekBar
+       style="@style/design"
+       android:id="@+id/sb"
+       android:layout_width="match_parent"
+       android:progress="40"
+       android:max="100"
+       />
+    <TextView
+        style="@style/design"
+        android:id="@+id/sb_result"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:text="Result Seekbar"/>
+</LinearLayout>
