@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UserInputControls</string>
+    <string-array name="branch">
+        <item>CSE</item>
+        <item>IT</item>
+        <item>EEE</item>
+    </string-array>
+    <string-array name="departments">
+        <item>cse</item>
+        <item>it</item>
+    </string-array>
+</resources>
