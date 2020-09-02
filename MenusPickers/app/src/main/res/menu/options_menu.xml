@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:title="Setting"
+    app:showAsAction="never"
+    android:id="@+id/setting"/>
+    <item
+        android:icon="@drawable/abc_vector_test"
+        android:title="Favorite"
+        app:showAsAction="always"
+        android:id="@+id/favorite"/>
+    <item
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Contact"
+        app:showAsAction="ifRoom"
+        android:id="@+id/contact"/>
+    <item
+        android:title="Search"
+        app:showAsAction="always"
+        android:id="@+id/search"/>
+</menu>
