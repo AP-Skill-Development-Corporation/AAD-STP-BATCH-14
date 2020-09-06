@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    >
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Covid19 Updates .!"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorPrimary"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date "
+        android:id="@+id/date_tv"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="#FA4006"/>
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Country "
+        android:id="@+id/country_tv"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="#090909"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmed "
+        android:id="@+id/confired_tv"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="#EC1707"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deaths "
+        android:id="@+id/deaths_tv"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="#5802F1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recovered "
+        android:id="@+id/recovered_tv"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="#08E411"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active "
+        android:id="@+id/active_tv"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:textColor="#FA4006"/>
+
+</LinearLayout>
+</ScrollView>
+</layout>
