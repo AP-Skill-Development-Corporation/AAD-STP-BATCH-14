@@ -48,11 +48,10 @@ Microphone and Speakers facility for Offline training program.
             c. Ancestral and Back Navigation
             d. Lateral Navigation 
                   i. Tabs for navigation
-      19. Recyclerview and DiffUtil
+      19. Recyclerview
       20. Working in the background
       21. Fetching JSON Data from the internet using retrofit GET.
             a. Discussion of various JSON Converters.
-            b. Writing data to the api using retrofit POST.
       22. Broadcast Receivers
       23. Schedulers
             a. Notifications
