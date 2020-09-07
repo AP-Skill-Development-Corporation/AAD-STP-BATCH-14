@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/diplomata"
+        android:gravity="center"
+        android:text="Hello World!"
+        android:textSize="30sp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_one"
+        android:text="Button1"/>
+    <Button
+        android:background="@drawable/button_two"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Button2"/>
+    <Button
+        android:background="@drawable/button_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#DCD4D4"
+        android:text="Button3"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_four"
+        android:text="GO"/>
+    <EditText
+        android:backgroundTint="#C61111"
+        android:drawableLeft="@drawable/mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter name"/>
+    <EditText
+        android:background="@drawable/button_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter name"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorPrimary"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
