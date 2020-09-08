@@ -15,7 +15,7 @@ package com.muneiah.example.roomdb;
 public class MainActivity extends AppCompatActivity {
     EditText name,rollnumber;
     RecyclerView rec;
-    StudentDataBase dataBase;
+   static StudentDataBase dataBase;
     StudentEntity entity;
     StudentAdapter adapter;
     List<StudentEntity> entityList;

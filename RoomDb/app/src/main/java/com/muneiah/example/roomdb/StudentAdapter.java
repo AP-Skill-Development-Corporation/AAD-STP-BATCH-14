@@ -1,10 +1,12 @@
 package com.muneiah.example.roomdb;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +36,13 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
     public void onBindViewHolder(@NonNull StudentViewHoder holder, int position) {
     holder.n.setText(list.get(position).getName());
     holder.r.setText(list.get(position).getRollnum());
+    holder.d.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            MainActivity.dataBase.studentDAO().delete(list.get(position));
+            Toast.makeText(ctx, "deleted "+holder.n.getText().toString(), Toast.LENGTH_SHORT).show();
+        }
+    });
     }
 
     @Override
@@ -51,6 +60,18 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
             r = itemView.findViewById(R.id.rollnam);
             e = itemView.findViewById(R.id.edit);
             d = itemView.findViewById(R.id.delete);
+            e.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String nn=n.getText().toString();
+                    String rr=r.getText().toString();
+                    Intent intent=new Intent(ctx,UpdateActivity.class);
+                    intent.putExtra("name_key",nn);
+                    intent.putExtra("roll_key",rr);
+                    ctx.startActivity(intent);
+                }
+            });
+
         }
     }
 }
