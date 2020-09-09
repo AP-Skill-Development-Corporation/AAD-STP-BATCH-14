@@ -32,9 +32,11 @@ StudentEntity entity;
         entity=new StudentEntity();
         entity.setName(name);
         entity.setRollnum(roll);
-        MainActivity.dataBase.studentDAO().update(entity);
+        //MainActivity.dataBase.studentDAO().update(entity);
+        MainActivity.viewModel.update(entity);
         Toast.makeText(this, "updated "+name, Toast.LENGTH_SHORT).show();
-
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
 
 
     }

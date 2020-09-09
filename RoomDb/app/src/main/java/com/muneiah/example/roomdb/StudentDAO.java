@@ -1,5 +1,6 @@
 package com.muneiah.example.roomdb;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -17,5 +18,8 @@ public interface StudentDAO {
     @Delete
     public void delete(StudentEntity entity);
     @Query("SELECT * FROM student_table")
-    public List<StudentEntity> retrive();//normal Room Db
+    public LiveData<List<StudentEntity>> liveData();
+    //public List<StudentEntity> retrive();//normal Room Db
+
+
 }

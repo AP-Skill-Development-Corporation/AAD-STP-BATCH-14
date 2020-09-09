@@ -1,6 +1,8 @@
 package com.muneiah.example.roomdb;
 
         import androidx.appcompat.app.AppCompatActivity;
+        import androidx.lifecycle.Observer;
+        import androidx.lifecycle.ViewModelProvider;
         import androidx.recyclerview.widget.LinearLayoutManager;
         import androidx.recyclerview.widget.RecyclerView;
         import androidx.room.Room;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     StudentEntity entity;
     StudentAdapter adapter;
     List<StudentEntity> entityList;
+    static StudentViewModel viewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,9 +29,18 @@ public class MainActivity extends AppCompatActivity {
         rec=findViewById(R.id.recycler);
         name=findViewById(R.id.editTextPersonName);
         rollnumber=findViewById(R.id.editTextPersonRollnum);
-        dataBase= Room.databaseBuilder(this,StudentDataBase.class,"ap")
+        /*dataBase= Room.databaseBuilder(this,StudentDataBase.class,"ap")
                 .allowMainThreadQueries()
-                .build();
+                .build();*/
+        viewModel=new ViewModelProvider(this).get(StudentViewModel.class);
+        viewModel.liveData().observe(this, new Observer<List<StudentEntity>>() {
+            @Override
+            public void onChanged(List<StudentEntity> studentEntities) {
+                adapter=new StudentAdapter(MainActivity.this,studentEntities);
+                rec.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+                rec.setAdapter(adapter);
+            }
+        });
     }
 
     public void saveData(View view) {
@@ -37,16 +49,17 @@ public class MainActivity extends AppCompatActivity {
         entity=new StudentEntity();
         entity.setName(myname);
         entity.setRollnum(myroll);
-        dataBase.studentDAO().insert(entity);
+        viewModel.insert(entity);
+       /* dataBase.studentDAO().insert(entity);*/
         Toast.makeText(this, "Success "+myname, Toast.LENGTH_SHORT).show();
 
     }
 
-    public void reriveData(View view) {
+   /* public void reriveData(View view) {
         entityList=dataBase.studentDAO().retrive();
         adapter=new StudentAdapter(this,entityList);
         Toast.makeText(this, "Total "+entityList.size(), Toast.LENGTH_SHORT).show();
         rec.setLayoutManager(new LinearLayoutManager(this));
         rec.setAdapter(adapter);
-    }
+    }*/
 }
