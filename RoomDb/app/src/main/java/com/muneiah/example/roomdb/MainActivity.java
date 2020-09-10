@@ -46,13 +46,16 @@ public class MainActivity extends AppCompatActivity {
     public void saveData(View view) {
         String myname=name.getText().toString();
         String myroll=rollnumber.getText().toString();
-        entity=new StudentEntity();
-        entity.setName(myname);
-        entity.setRollnum(myroll);
-        viewModel.insert(entity);
-       /* dataBase.studentDAO().insert(entity);*/
-        Toast.makeText(this, "Success "+myname, Toast.LENGTH_SHORT).show();
-
+        if (myname.isEmpty()||myroll.isEmpty()){
+            Toast.makeText(this, "Please fill the details", Toast.LENGTH_SHORT).show();
+        }else {
+            entity = new StudentEntity();
+            entity.setName(myname);
+            entity.setRollnum(myroll);
+            viewModel.insert(entity);
+            /* dataBase.studentDAO().insert(entity);*/
+            Toast.makeText(this, "Success " + myname, Toast.LENGTH_SHORT).show();
+        }
     }
 
    /* public void reriveData(View view) {
