@@ -217,3 +217,10 @@ Recyclerview Components:
 4.Layout manager:It manage the each Layout
 5.Adapter:it will provide the access between data and Recyclerview
 6.ViewHolder:It will be hold the view and unhold 
+## Assignments 
+1.Toast message when clicked on count button in Hello toast
+2.Implementing Basic Calculator
+3.Check functionality of switch
+4.Recyclerview of android versions and names
+5.Designing college app using TabNavigation
+6.Login and Registration page using Shared preferences
